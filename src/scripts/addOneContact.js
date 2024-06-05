@@ -4,8 +4,8 @@ import { PATH_DB } from '../constants/contacts.js';
 
 export const addOneContact = async () => {
   try {
-    const data = await fs.readFile(PATH_DB, 'utf-8');
-    const contacts = JSON.parse(data);
+    const dataContacts = await fs.readFile(PATH_DB, 'utf-8');
+    const contacts = JSON.parse(dataContacts);
 
     const addedContact = createFakeContact();
     contacts.push(addedContact);
